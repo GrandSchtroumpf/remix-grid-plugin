@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+header#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 30px;
+}
+
+ngb-tabset {
+  flex: 1;
+  overflow: hidden;
+  header {
+    padding: 20px;
+  }
+
+  section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  form {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    width: 40%;
+  }
+
+  button {
+    width: 80%;
+  }
+}

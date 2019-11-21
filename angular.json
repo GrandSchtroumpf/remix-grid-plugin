@@ -8,6 +8,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@datorama/akita:component": {
+          "styleext": "scss"
         }
       },
       "root": "",
@@ -124,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "grid-plugin"
+    }
+  },
+  "defaultProject": "grid-plugin",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

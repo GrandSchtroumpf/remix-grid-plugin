@@ -1,0 +1,13 @@
+<section>
+  <article class="card" *ngFor="let manager of managers$ | async">
+    <header class="card-header">
+      <h3 class="card-title">{{ manager.displayName }}</h3>
+    </header>
+    <div class="card-body">
+      <p>{{ manager.about.description }}</p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-primary" [routerLink]="manager.name">Details</a>
+    </div>
+  </article>
+</section>

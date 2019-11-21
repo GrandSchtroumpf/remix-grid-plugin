@@ -1,0 +1,77 @@
+<ng-container *ngIf="manager$ | async as manager">
+  <header id="title" class="bg-light">
+    <h3>{{ manager.displayName }}</h3>
+    <h6 class="text-muted">Connected</h6>
+  </header>
+  <ngb-tabset>
+    <ngb-tab title="About" *ngIf="manager.about as about">
+      <ng-template ngbTabContent>
+        <header>
+          <h4>Description</h4>
+          <p>{{ about.description }}</p>
+        </header>
+        <section>
+          <!-- Links -->
+          <article class="card" *ngIf="about.links.length">
+            <header class="card-header">
+              <h4 class="card-title">Links</h4>
+            </header>
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action"
+                *ngFor="let link of about.links"
+                [href]="link.url"
+                >{{ link.name }}</a
+              >
+            </div>
+          </article>
+          <!-- Docs -->
+          <article class="card" *ngIf="about.docs.length">
+            <header class="card-header">
+              <h4 class="card-title">Documentation</h4>
+            </header>
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action"
+                *ngFor="let doc of about.docs"
+                [href]="doc.url"
+                >{{ doc.name }}</a
+              >
+            </div>
+          </article>
+          <!-- Community -->
+          <article class="card" *ngIf="about.community.length">
+            <header class="card-header">
+              <h4 class="card-title">Community</h4>
+            </header>
+            <div class="list-group">
+              <a
+                class="list-group-item list-group-item-action"
+                *ngFor="let com of about.community"
+                [href]="com.url"
+                >{{ com.name }}</a
+              >
+            </div>
+          </article>
+        </section>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Settings">
+      <ng-template ngbTabContent>
+        <form>
+          <div *ngFor="let setting of manager.settings" class="form-group">
+            <label [for]="setting.label">{{ setting.label }}</label>
+            <input
+              type="text"
+              class="form-control"
+              [id]="setting.label"
+              aria-describedby="emailHelp"
+              [placeholder]="setting.label"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</ng-container>

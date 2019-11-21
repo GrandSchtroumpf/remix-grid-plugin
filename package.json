@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~8.2.13",
     "@angular/platform-browser-dynamic": "~8.2.13",
     "@angular/router": "~8.2.13",
+    "@datorama/akita": "^4.14.1",
+    "@datorama/akita-ng-entity-service": "^1.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.4",
+    "@remixproject/plugin": "^0.1.18",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -28,6 +32,7 @@
     "@angular/cli": "~8.3.17",
     "@angular/compiler-cli": "~8.2.13",
     "@angular/language-service": "~8.2.13",
+    "@datorama/akita-ngdevtools": "^3.0.2",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
