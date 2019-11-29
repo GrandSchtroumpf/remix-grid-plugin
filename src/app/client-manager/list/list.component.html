@@ -7,7 +7,7 @@
       <p>{{ manager.about.description }}</p>
     </div>
     <div class="card-footer">
-      <a class="btn btn-primary" [routerLink]="manager.name">Details</a>
+      <a class="btn btn-primary" [routerLink]="['..', manager.name]">Details</a>
     </div>
   </article>
 </section>
